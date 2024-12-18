@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  background: linear-gradient(to top left, #e0f7fa, #ffffff);
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  opacity: 0;
+  animation: fadeInMain 1s ease-out forwards;
+}
+
+@keyframes fadeInMain {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+header h1 {
+  font-size: 46px;
+  color: #00bcd4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header h1:hover {
+  color: #0097a7;
+}
+
+#add-task-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding-top 0.3s ease;
+}
+
+#add-task-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding-top: 25px;
+}
+
+#add-task-section h2 {
+  transition: transform 0.3s ease;
+}
+
+#add-task-section:hover h2 {
+  transform: translateY(-5px);
+}
+
+#task-list-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding-top 0.3s ease;
+}
+
+#task-list-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding-top: 25px;
+}
+
+#task-list-section h2 {
+  transition: transform 0.3s ease;
+}
+
+#task-list-section:hover h2 {
+  transform: translateY(-5px);
+}
+
+#timer-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards 0.6s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding-top 0.3s ease;
+}
+
+#timer-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding-top: 25px;
+}
+
+#timer-section h2 {
+  transition: transform 0.3s ease;
+}
+
+#timer-section:hover h2 {
+  transform: translateY(-5px);
+}
+
+#daily-summary,
+#weekly-overview {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards 0.9s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, padding-top 0.3s ease;
+}
+
+#daily-summary:hover,
+#weekly-overview:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding-top: 25px;
+}
+
+#daily-summary h2,
+#weekly-overview h2 {
+  transition: transform 0.3s ease;
+}
+
+#daily-summary:hover h2,
+#weekly-overview:hover h2 {
+  transform: translateY(-5px);
+}
+
+form input,
+form textarea,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+#task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task h3 {
+  font-size: 20px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.task p {
+  color: #777;
+  font-size: 14px;
+}
+
+.task button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.task button:hover {
+  background-color: #e53935;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+#timer-display {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#timer-section button {
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+#start-timer {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#pause-timer {
+  background-color: #FFC107;
+  color: white;
+}
+
+#stop-timer {
+  background-color: #F44336;
+  color: white;
+}
+
+#timer-section button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+#daily-summary h2,
+#weekly-overview h2 {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+#summary-content,
+#weekly-content {
+  font-size: 16px;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 30px #00bcd4;
+  }
+  100% {
+    text-shadow: 0 0 20px #0097a7, 0 0 30px #0097a7, 0 0 40px #0097a7;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #task-list,
+  .task {
+    flex-direction: column;
+  }
+}
+
+/* Animation for the 'active' state */
+#task-list-section:active,
+#add-task-section:active,
+#timer-section:active,
+#daily-summary:active,
+#weekly-overview:active {
+  transform: translateY(-20px);
+}
+
+#task-list-section:active h2,
+#add-task-section:active h2,
+#timer-section:active h2,
+#daily-summary:active h2,
+#weekly-overview:active h2 {
+  transform: translateY(-10px);
+}

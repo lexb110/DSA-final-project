@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Time Management System</h1>
+  </header>
+
+    <!-- Video Background -->
+    <video autoplay muted loop style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+      <source src="meow.mp4" type="video/mp4">
+    </video>
+
+
+  <main>
+    <!----- Add Task Form ------->
+    <section id="add-task-section">
+      <h2>Add a Task</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required>
+        <textarea id="task-desc" placeholder="Task Description"></textarea>
+        <select id="task-priority">
+          <option value="high">High Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="low">Low Priority</option>
+        </select>
+        <input type="time" id="task-start-time" required>
+        <input type="number" id="task-duration" placeholder="Duration (in mins)" required>
+        <input type="date" id="task-day" required>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <!-- Task List -->
+    <section id="task-list-section">
+      <h2>Task List</h2>
+      <div id="task-list"></div>
+    </section>
+
+    <!-- Timer Section -->
+    <section id="timer-section">
+      <h2>Task Timer</h2>
+      <p id="timer-display">00:00:00</p>
+      <button id="start-timer">Start</button>
+      <button id="pause-timer">Pause</button>
+      <button id="stop-timer">Stop</button>
+    </section>
+
+    <!-- Daily Summary -->
+    <section id="daily-summary">
+      <h2>Daily Summary</h2>
+      <p id="summary-content"></p>
+    </section>
+
+    <!-- Weekly Overview -->
+    <section id="weekly-overview">
+      <h2>Weekly Overview</h2>
+      <p id="weekly-content"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
